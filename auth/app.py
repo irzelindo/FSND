@@ -19,18 +19,36 @@ class AuthError(Exception):
         self.error = error
         self.status_code = status_code
 
-def requires_auth(f):
-    """ Decorator function """
-    @wraps(f)
-    def wrapper(*args, **kwargs):
-        jwt = get_token_auth_header()
-        # is_valid = verify_decode_jwt(jwt)
-        try:
-            payload = verify_decode_jwt(jwt)
-        except:
-            abort(401)
-        return f(payload, *args, **kwargs)
-    return wrapper
+
+
+def check_permissions(permission, payload):
+    if "permissions" not in payload:
+        abort(400)
+
+    if permission not in payload["permissions"]:
+        abort(403)
+
+    return True
+
+
+
+def requires_auth(permission=""):
+    def requires_auth_decorator(f):
+        """ Decorator function """
+        @wraps(f)
+        def wrapper(*args, **kwargs):
+            jwt = get_token_auth_header()
+            # is_valid = verify_decode_jwt(jwt)
+            try:
+                payload = verify_decode_jwt(jwt)
+            except:
+                abort(401)
+
+            check_permissions(permission, payload)
+
+            return f(payload, *args, **kwargs)
+        return wrapper
+    return requires_auth_decorator
 
 def verify_decode_jwt(token):
     # GET THE PUBLIC KEY FROM AUTH0
@@ -109,7 +127,7 @@ def get_token_auth_header():
     return header_parts[1].strip()
 
 @APP.route("/images")
-@requires_auth
+@requires_auth('get:images')
 def images(jwt):
     """ Retrieves the headers auth keys """
     print(jwt)

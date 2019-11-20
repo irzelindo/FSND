@@ -31,16 +31,16 @@ def setup_db(app, secret_key=SECRET_KEY, database_path=DATABASE_PATH):
 class crud_ops():
 
     def insert(self):
-        """ Insert data into venues table """
+        """ Insert data """
         db.session.add(self)
         db.session.commit()
 
     def update(self):
-        """ Update venue on venues table """
+        """ Update data """
         db.session.commit()
 
     def delete(self):
-        """ Delete venue on venues table """
+        """ Delete data """
         db.session.delete(self)
         db.session.commit()
 
@@ -63,11 +63,13 @@ class Venue_Genre_Link(db.Model, crud_ops):
     deslikes = db.Column(db.Integer)
 
 
-class City_Venue_Address_Link(db.Model, crud_ops):
-    __tablename__ = "city_venue_address_link"
+class Venue_City_Link(db.Model, crud_ops):
+    __tablename__ = "venue_city_link"
 
-    city_id = db.Column(db.Integer, db.ForeignKey("cities.id"), primary_key=True)
-    venue_address_id = db.Column(db.Integer, db.ForeignKey("venue_address.id"), primary_key=True)
+    venue_id = db.Column(db.Integer, db.ForeignKey("venues.id"), primary_key=True)
+    city_id = db.Column(db.Integer, db.ForeignKey("city.id"), primary_key=True)
+    likes = db.Column(db.Integer)
+    deslikes = db.Column(db.Integer)
 
 
 class Genre(db.Model, crud_ops):
@@ -104,8 +106,9 @@ class Venue(db.Model, crud_ops):
     seeking_talent = db.Column(db.Boolean, default=True)
     seeking_description = db.Column(db.String(500))
     shows = db.relationship("Show", cascade="all, delete-orphan", back_populates="venues")
-    venue_address = db.relationship("Venue_Address", cascade="all, delete-orphan", back_populates="venues")
-    genres = db.relationship('Genre', secondary="venue_genre_link")
+    venue_address = db.relationship("Venue_Address", cascade="all, delete", back_populates="venues")
+    genres = db.relationship('Genre', secondary="venue_genre_link", back_populates='venues', lazy='joined', cascade="all, delete")
+    cities = db.relationship('City', secondary="venue_city_link", back_populates='venues', lazy='joined', cascade="all, delete")
 
     def __init__(self, venue_id, name,
                  image_link=None, facebook_link=None, website=None, seeking_talent=None,
@@ -139,43 +142,58 @@ class Venue_Address(db.Model, crud_ops):
     phone = db.Column(db.String(120))
     venue_id = db.Column(db.Integer, db.ForeignKey("venues.id"), nullable=True)
     venues = db.relationship("Venue", back_populates="venue_address")
-    cities = db.relationship("City", secondary="city_venue_address_link")
 
-    def __init__(self, id, address, phone, venue_id):
+    def __init__(self, id, address, phone):
         self.id = id
         self.address = address
         self.phone = phone
-        self.venue_id = venue_id
 
     def serialize(self):
         return {
             "id": self.id,
             "address": self.address,
             "phone": self.phone,
-            "venue_id": self.venue_id
         }
 
 
-class City(db.Model, crud_ops):
-    __tablename__ = "cities"
+class State(db.Model, crud_ops):
+    __tablename__ = "states"
 
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(120))
-    state = db.Column(db.String(120))
-    venues_address = db.relationship("Venue_Address", secondary="city_venue_address_link")
+    cities = db.relationship("City", cascade="all, delete-orphan")
 
-    def __init__(self, id, city, state, venue_address_id):
+
+    def __init__(self, id, name):
         self.id = id
-        self.city = city
-        self.state = state
-        self.venue_address_id = venue_address_id
+        self.name = name
 
     def serialize(self):
         return {
             "id": self.id,
-            "state": self.state,
-            "city": self.city,
-            "venue_address_id": self.venue_address_id
+            "name": self.name
+        }
+
+
+class City(db.Model, crud_ops):
+    __tablename__ = "city"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(120))
+    state_id = db.Column(db.Integer, db.ForeignKey("states.id"), nullable=True)
+    states = db.relationship("State", back_populates="cities")
+    venues = db.relationship('Venue', secondary="venue_city_link")
+
+    def __init__(self, city_id, name, state_id):
+        self.id = city_id
+        self.name = name
+        self.state_id = state_id
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+            "state_id": self.state_id
         }
 
 

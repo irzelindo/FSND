@@ -1,9 +1,11 @@
 from datetime import datetime
-from flask_wtf import Form
+from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, SelectMultipleField, DateTimeField
-from wtforms.validators import DataRequired, AnyOf, URL
+from wtforms.validators import DataRequired, AnyOf, URL, Length, ValidationError
 
-class ShowForm(Form):
+# Defining a custom validator for enum restriction on genres list fied
+
+class ShowForm(FlaskForm):
     artist_id = StringField(
         'artist_id'
     )
@@ -16,7 +18,8 @@ class ShowForm(Form):
         default=datetime.today()
     )
 
-class VenueForm(Form):
+
+class VenueForm(FlaskForm):
     name = StringField(
         'name', validators=[DataRequired()]
     )
@@ -77,6 +80,16 @@ class VenueForm(Form):
             ('WV', 'WV'),
             ('WI', 'WI'),
             ('WY', 'WY'),
+            ('MP', 'MP'),
+            ('GZ', 'GZ'),
+            ('IN', 'IN'),
+            ('MN', 'MN'),
+            ('SF', 'SF'),
+            ('TE', 'TE'),
+            ('ZA', 'ZA'),
+            ('NP', 'NP'),
+            ('NI', 'NI'),
+            ('CD', 'CD'),
         ]
     )
     address = StringField(
@@ -90,7 +103,9 @@ class VenueForm(Form):
     )
     genres = SelectMultipleField(
         # TODO implement enum restriction
-        'genres', validators=[DataRequired()],
+        'genres', validators=[DataRequired(),
+                              Length(min=1, max=5,
+                                     message="A maximum of 5 genres is accepted!")],
         choices=[
             ('Alternative', 'Alternative'),
             ('Blues', 'Blues'),
@@ -117,7 +132,10 @@ class VenueForm(Form):
         'facebook_link', validators=[URL()]
     )
 
-class ArtistForm(Form):
+# TODO IMPLEMENT NEW ARTIST FORM AND NEW SHOW FORM
+
+class ArtistForm(FlaskForm):
+
     name = StringField(
         'name', validators=[DataRequired()]
     )
@@ -178,11 +196,21 @@ class ArtistForm(Form):
             ('WV', 'WV'),
             ('WI', 'WI'),
             ('WY', 'WY'),
+            ('MP', 'MP'),
+            ('GZ', 'GZ'),
+            ('IN', 'IN'),
+            ('BR', 'BR'),
+            ('ZA', 'ZA'),
+            ('TE', 'TE'),
+            ('NP', 'NP'),
+            ('CB', 'CB'),
+            ('NI', 'NI'),
+            ('MA', 'MA')
         ]
     )
     phone = StringField(
-        # TODO implement validation logic for state
-        'phone'
+        # TODO implement validation logic for phone
+        'phone', validators=[DataRequired()]
     )
     image_link = StringField(
         'image_link'
@@ -212,9 +240,31 @@ class ArtistForm(Form):
             ('Other', 'Other'),
         ]
     )
+
+    def enum_restriction(self, form, field):
+        if len(field.data) > 5:
+            raise ValidationError('List of genres must not exceed five')
+
     facebook_link = StringField(
         # TODO implement enum restriction
         'facebook_link', validators=[URL()]
     )
 
-# TODO IMPLEMENT NEW ARTIST FORM AND NEW SHOW FORM
+
+
+class ShowForm(FlaskForm):
+    artist_id = StringField(
+        'artist_id', validators=[DataRequired()]
+    )
+
+    venue_id = StringField(
+        'venue_id', validators=[DataRequired()]
+    )
+
+    ticket_price = StringField(
+        'ticket_price', validators=[DateTimeField()]
+    )
+
+    start_time = DateTimeField(
+        'start_time', validators=[DataRequired()]
+    )

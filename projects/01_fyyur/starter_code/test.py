@@ -1,3 +1,3 @@
-from .models import Artist
+from models import Artist
 
 artist = Artist.insert()

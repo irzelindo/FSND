@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac3460a8-a2de-4046-a6f2-ca9c7845df89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/migrations/versions/329b908c1637_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/migrations/versions/98993fcf2a2d_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/migrations/versions/b1e88e77fa82_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/migrations/versions/cd8efaf8cdfe_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/migrations/versions/d4a68abba1c7_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/03_coffee_shop_full_stack.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../auth/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../auth/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/forms/new_show.html" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/forms/new_show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/layouts/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/layouts/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/show_artist.html" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/show_artist.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/shows.html" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/shows.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/venues.html" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/templates/pages/venues.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../01_fyyur/starter_code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../01_fyyur/starter_code/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/database/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/database/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/frontend/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +25,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -72,6 +50,14 @@
       <option name="presentableId" value="Default" />
       <updated>1573563943683</updated>
     </task>
+    <task id="LOCAL-00001" summary="Coffee shop project @TODOS update">
+      <created>1574240197642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574240197642</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,5 +72,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Coffee shop project @TODOS update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coffee shop project @TODOS update" />
   </component>
 </project>

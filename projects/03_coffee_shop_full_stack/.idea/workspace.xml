@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3460a8-a2de-4046-a6f2-ca9c7845df89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/frontend/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/frontend/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/starter_code/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/frontend/package.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,19 +27,24 @@
   </component>
   <component name="ProjectId" id="1TW6qEMP3ThrDDNpNMgEVcBoUtv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -57,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574240197642</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add login handler on the user page">
+      <created>1574784667336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1574784667336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,6 +91,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Coffee shop project @TODOS update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coffee shop project @TODOS update" />
+    <MESSAGE value="Add login handler on the user page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add login handler on the user page" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2243" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575402673145">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2243" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575402673145" />
+    <state x="2241" y="188" key="SettingsEditor" timestamp="1575402940540">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2241" y="188" key="SettingsEditor/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575402940540" />
+    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1575411390056">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="456" y="267" key="com.intellij.ide.util.TipDialog/0.27.1600.826/1600.0.1920.1080@0.27.1600.826" timestamp="1575400573065" />
+    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575411390056" />
   </component>
 </project>

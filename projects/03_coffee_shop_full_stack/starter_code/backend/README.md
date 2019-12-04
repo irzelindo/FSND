@@ -83,3 +83,84 @@ There are `@TODO` comments throughout the `./backend/src`. We recommend tackling
 
 1. `./src/auth/auth.py`
 2. `./src/api.py`
+
+### After implementing the server endpoints
+
+##### Each endpoint should return a json object
+
+###### I.E. both Manager and Barista can get drinks
+for http://127.0.0.1:5000/drinks
+```json
+{
+  "drinks": [
+    {
+      "id": 1,
+      "recipe": [
+        {
+          "color": "#fc4903",
+          "parts": 2
+        },
+        {
+          "color": "#fc037f",
+          "parts": 3
+        }
+      ],
+      "title": "Strawberry"
+    },
+    {
+      "id": 4,
+      "recipe": [
+        {
+          "color": "yellow",
+          "parts": 1
+        },
+        {
+          "color": "#ccf296",
+          "parts": 1
+        }
+      ],
+      "title": "Banana Juice"
+    },
+    {
+      "id": 6,
+      "recipe": [
+        {
+          "color": "brown",
+          "parts": 1
+        },
+        {
+          "color": "#b34e29",
+          "parts": 1
+        }
+      ],
+      "title": "Martini"
+    },
+    {
+      "id": 7,
+      "recipe": [
+        {
+          "color": "orange",
+          "parts": 1
+        }
+      ],
+      "title": "Wisky"
+    },
+    {
+      "id": 8,
+      "recipe": [
+        {
+          "color": "#cdff7d",
+          "parts": 2
+        },
+        {
+          "color": "#40f5da",
+          "parts": 1
+        }
+      ],
+      "title": "Mojito"
+    }
+  ],
+  "status_code": 200,
+  "success": true
+}
+```

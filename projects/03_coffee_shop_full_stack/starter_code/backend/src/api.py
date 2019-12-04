@@ -123,8 +123,7 @@ def create_drinks():
     else:
         return jsonify({
             'success': False,
-            'status_code': 401,
-            'drinks': "This drink is already in database"
+            'status_code': 401
         })
 
 
@@ -194,13 +193,12 @@ def delete_drinks(drink_id):
 Example error handling for unprocessable entity
 '''
 
-
 @app.errorhandler(422)
-def unprocessable(error):
+def unprocessable_request(error):
     return jsonify({
         "success": False,
         "error": 422,
-        "message": "unprocessable"
+        "message": "Unprocessable"
     }), 422
 
 
@@ -222,12 +220,12 @@ def unprocessable(error):
 
 
 @app.errorhandler(404)
-def bad_request(error):
-    """ Returns 400 Bad Request Error """
+def not_found_request(error):
+    """ Returns 404 Resource not found Error """
     return jsonify({
         "success": False,
         "error": 404,
-        "message": "resource not found"
+        "message": "Resource Not Found"
     }), 404
 
 
@@ -238,10 +236,20 @@ def bad_request(error):
 
 
 @app.errorhandler(401)
-def bad_request(error):
-    """ Returns 400 Bad Request Error """
+def unauthorized_request(error):
+    """ Returns 401 Unauthorized authentication required Error """
     return jsonify({
         "success": False,
         "error": 401,
         "message": "Unauthorized authentication required"
     }), 401
+
+
+@app.errorhandler(403)
+def forbidden_request(error):
+    """ Returns 403 Forbidden Authorization Required Error """
+    return jsonify({
+        "success": False,
+        "error": 403,
+        "message": "Forbidden Authorization Required"
+    }), 403

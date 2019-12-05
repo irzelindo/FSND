@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ac3460a8-a2de-4046-a6f2-ca9c7845df89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/backend/src/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/auth/auth.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/src/database/database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/backend/udacity-fsnd-udaspicelatte.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_code/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/starter_code/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS" beforeDir="false" afterPath="$PROJECT_DIR$/../FSND-Deploy-Flask-App-to-Kubernetes-Using-EKS" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +32,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -73,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574784667336</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update the JWT token expiration time">
+      <created>1575453408257</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575453408257</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,21 +98,31 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Coffee shop project @TODOS update" />
     <MESSAGE value="Add login handler on the user page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add login handler on the user page" />
+    <MESSAGE value="Update the JWT token expiration time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the JWT token expiration time" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2243" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575402673145">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2243" y="267" width="624" height="544" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575402673145" />
-    <state x="2241" y="188" key="SettingsEditor" timestamp="1575402940540">
+    <state x="2292" y="375" width="525" height="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1575480405164">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
+    <state x="2292" y="375" width="525" height="328" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575480405164" />
+    <state x="2117" y="49" width="875" height="980" key="CommitChangelistDialog2" timestamp="1575453407028">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2117" y="49" width="875" height="980" key="CommitChangelistDialog2/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575453407028" />
+    <state x="534" y="123" key="SettingsEditor" timestamp="1575480971729">
+      <screen x="0" y="27" width="1600" height="826" />
+    </state>
+    <state x="534" y="123" key="SettingsEditor/0.27.1600.826/1600.0.1920.1080@0.27.1600.826" timestamp="1575480971729" />
     <state x="2241" y="188" key="SettingsEditor/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575402940540" />
-    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1575411390056">
+    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1575484891102">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="456" y="267" key="com.intellij.ide.util.TipDialog/0.27.1600.826/1600.0.1920.1080@0.27.1600.826" timestamp="1575400573065" />
-    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575411390056" />
+    <state x="2147" y="314" key="com.intellij.ide.util.TipDialog/0.27.1600.826/1600.0.1920.1080@1600.0.1920.1080" timestamp="1575484891102" />
   </component>
 </project>

@@ -1,0 +1,24 @@
+{% extends 'layouts/main.html' %}
+{% block title %}Fyyur | Venues{% endblock %}
+{% block content %}
+{% for area in areas %}
+<h3>{{ area.city }}, {{ area.state }}</h3>
+<ul class="items">
+    {% for venue in area.venues %}
+    <li class="row">
+        <a class="col-sm-6" href="/venues/{{ venue.id }}">
+            <i class="fas fa-music"></i>
+            <div class="item">
+                <h5>{{ venue.name }}</h5>
+            </div>
+        </a>
+        <form class="col-sm-6" action="{{ url_for('delete_venue' ,venue_id=venue.id) }}" method="POST">
+            <button type="submit" class="btn btn-primary">
+				<i class='fas fa-trash-alt' style='font-size:16px;color:black'></i>
+			</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+{% endfor %}
+{% endblock %}
